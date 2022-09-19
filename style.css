@@ -56,7 +56,7 @@ body{
 }
 
 .container{
-    width:800px;
+    width:960px;
     background-color: rgb(236, 231, 231);
     margin:auto;
 }
@@ -89,8 +89,8 @@ body{
 }
 
 .hero{
-    height:300px;
-    background-image: url("image/tommy-silver-cCw6KQVJnyU-unsplash\ 1.png");
+    height: 360px;
+    background-image: url("image/mount_fuji.png");
 
 }
 
@@ -109,36 +109,89 @@ body{
     color:brown;
 }
 
-.content{
+.main{
     margin:9px;
+    width: 600px;
+    box-sizing: border-box;
+    float: left;
 }
 
-.content h2{
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+
+.main h2{
     font-size: 30px;
     
 }
 
-.content .writer{
+.main .writer{
     font-size: 10px;
     margin-top:-3px;
 }
 
-.content .writer a{
+.main .writer a{
     text-decoration: none;
     color:rgb(32, 29, 29);
 }
 
-.content .writer a:hover{
+.main .writer a:hover{
     color:brown;
 }
 
-.content p{
+.main p{
     margin-bottom: 15px;
     font-size: 15px;
+}
+
+.sidebar{
+    width: 300px;
+    float: right;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.sidebar h3{
+    font-weight: bold;
+}
+
+.sidebar img{
+    width: 70px;
+    height:70px;
+    float: left;
+    padding-right: 10px;
+}
+
+.sidebar p{
+    font:12px/18px arial;
 }
 
 .footer .copy{
     background-color: rgb(219, 179, 179);
     text-align: center;
+    font-size: 13px;
     padding: 13px;
 }
